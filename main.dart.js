@@ -62000,7 +62000,7 @@ g===$&&A.a()
 s=t.E
 g=A.oB(A.c([h,new A.k7(B.k7,A.jv(g,new A.a7M(this),n),n),A.bf(n,n,new A.b7(n,n,n,n,n,new A.bF(B.aa,B.a7,B.y,A.c([B.j,B.G],m),n,n),B.z),2,n,n,100)],s),B.bL,B.a4)
 h=A.cx("We can't wait to",A.hs().$3$color$fontSize$fontWeight(A.a7(204,B.O.n()>>>16&255,B.O.n()>>>8&255,B.O.n()&255),28,B.m))
-r=A.cx("celebrate with you!",A.hs().$5$color$fontSize$fontStyle$fontWeight$letterSpacing(B.W,32,B.ar,B.ay,1))
+r=A.cx("celebrate with you!",A.hs().$5$color$fontSize$fontStyle$fontWeight$letterSpacing(B.W,27,B.ar,B.ay,1))
 q=B.c.a9(76.5)
 p=A.a7(q,B.j.n()>>>16&255,B.j.n()>>>8&255,B.j.n()&255)
 q=A.a7(q,B.j.n()>>>16&255,B.j.n()>>>8&255,B.j.n()&255)
