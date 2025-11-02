@@ -32,9 +32,94 @@
 
   <title>my_wedding_invitation</title>
   <link rel="manifest" href="manifest.json">
+
+  <style>
+    /* Add CSS to overlay the ring icon on the couple image */
+    .wedding-img-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 100vw;
+      margin: 20px auto 0 auto;
+    }
+
+    .wedding-img {
+      display: block;
+      width: 350px;
+      max-width: 90vw;
+      border-radius: 25px;
+      box-shadow: 0 8px 30px rgba(200, 40, 120, 0.10), 0 3px 14px rgba(130, 0, 100, 0.06);
+      object-fit: cover;
+    }
+
+    .ring-icon {
+      position: absolute;
+      bottom: 20px;
+      right: 32px;
+      width: 58px;
+      height: 58px;
+      pointer-events: none;
+      z-index: 2;
+      opacity: 0.88;
+      filter: drop-shadow(0px 2px 5px rgba(180, 80, 160, 0.21));
+      /* Animation for subtle entrance */
+      animation: ring-pop 1.4s cubic-bezier(0.5, 1.2, 0.7, 1.0) both;
+    }
+
+    @keyframes ring-pop {
+      0% {
+        transform: scale(0.1) rotate(-70deg);
+        opacity: 0;
+      }
+
+      75% {
+        transform: scale(1.15) rotate(5deg);
+        opacity: 1;
+      }
+
+      100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 0.88;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .wedding-img {
+        width: 95vw;
+        min-width: 0;
+      }
+
+      .ring-icon {
+        right: 12px;
+        bottom: 12px;
+        width: 38px;
+        height: 38px;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <div class="wedding-img-container">
+    <img class="wedding-img" src="assets/images/our_image.JPG" alt="Wedding Couple" />
+    <!-- Wedding ring icon as SVG overlay -->
+    <svg class="ring-icon" viewBox="0 0 64 64" fill="none">
+      <!-- Gold Ring (circle & ellipse) -->
+      <ellipse cx="32" cy="42" rx="19" ry="19" stroke="#E1B866" stroke-width="6" fill="none" />
+      <ellipse cx="32" cy="42" rx="13" ry="13" stroke="#F7E4B0" stroke-width="2" fill="none" />
+      <!-- Diamond -->
+      <polygon points="32,13 38,23 32,18 26,23" fill="#A3C5E6" stroke="#538BBB" stroke-width="1.5" />
+      <polygon points="29,9 32,13 35,9" fill="#E7F7FF" stroke="#9BDFFB" stroke-width="1" />
+      <polyline points="29,9 26,15 38,15 35,9" fill="none" stroke="#77B6E7" stroke-width="1" />
+      <!-- Ring sparkle -->
+      <g>
+        <line x1="44" y1="29" x2="48" y2="25" stroke="#FFF4C4" stroke-width="2" />
+        <line x1="20" y1="27" x2="17" y2="24" stroke="#FFF4C4" stroke-width="1.5" />
+        <line x1="34" y1="24" x2="34.5" y2="19" stroke="#FFF4C4" stroke-width="1.2" />
+      </g>
+    </svg>
+  </div>
   <script src="flutter_bootstrap.js" async></script>
 </body>
 
